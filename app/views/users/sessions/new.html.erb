@@ -1,0 +1,31 @@
+<center> 
+  <h1 class="mrg-top-30">Log in</h1>
+  <div class="mrg-top-10"> 
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true , class: "form-control col-md-4" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" , class: "form-control col-md-4"%>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
+
+      <div class="actions mrg-top-10">
+        <%= f.submit "Log in" , class: "btn btn-primary btn-prmy-cust"%>
+      </div>
+    <% end %>
+  </div>  
+  <div class="mrg-top-10">
+    <%= render "users/shared/links" %>
+  </div>  
+</center>

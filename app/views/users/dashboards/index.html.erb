@@ -1,0 +1,13 @@
+<div class="mrg-top-10">
+ 
+  <h1 class="mrg-top-30"> Download Patients Data</h1>
+ 
+  <div class="row text-center mrg-top-30 no_mrg">
+    <div class="col-md-6">
+      <%= button_to "Download CSV", users_download_patients_data_path("csv") , :class => "btn btn-primary btn-prmy-cust"%>
+    </div>
+    <div class="col-md-6">
+      <%= button_to "Download JSON", users_download_patients_data_path("json") , :class => "btn btn-primary btn-prmy-cust"%>
+    </div>    
+  </div>
+</div>

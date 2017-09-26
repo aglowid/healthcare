@@ -1,0 +1,204 @@
+<div class="full-width banner1"><!--start banner1-->
+	<div class="bg__foo">
+		<h1>A prestigious Dental Center<br />
+		<span>Offering Comprehensive Dental Treatment at Al Khor, State of Qatar.</span></h1>
+	</div>
+	<div class="nav">
+		<div class="navbar-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul class="navigation">
+			<li class="active"><a href="#">LOTUS Story</a></li>
+			<li> 
+        <% if !current_user %>
+			    <%= link_to "Sign Up", new_user_registration_path %>
+			  <% end %>  
+			</li>
+			<li>
+			  <!-- display user email if user login -->
+			  <% if current_user %>
+          <%= link_to "Login as "+ current_user.email , new_user_session_path %>					  
+			  <% else %>
+			    <%= link_to "Login", new_user_session_path %>
+			  <% end %>  				
+			</li>
+
+			<% if current_user && current_user.role.name == Role::ROLES[0] %>
+				<li>
+				  <%= link_to "Dashboard", users_dashboard_path %>
+				</li>
+			<% end %>				
+			<li>
+				<% if user_signed_in? %>
+				  <li>
+				  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+				  </li>
+				<% end %>				
+			</li>
+
+		</ul>
+	</div>
+</div><!--end banner1-->
+
+<div class="full-width apoointment"><!--start apoointment-->
+	<a class="btn" href="#">Make an Appointment</a>
+</div><!--end apoointment-->
+
+<div class="full-width section1"><!--start section1-->
+	<div class="container">
+		<div class="about_img">
+		<%=image_tag "/assets/about.jpg", :alt=> "about"%>
+			<!-- <img src="images/about.jpg" alt="about" /> -->
+		</div>
+		<div class="about_content">
+			<h1>Lotus Story</h1>
+			<p>Our Mission to pioneer in Dentistry and Plastic care, and to attend to our responsibilities towards both of the doctor and the patient through founding the best medical environment that is constantly positive & supportive. </p>
+			<a class="btn no-pad" href="#">Dicover More</a>
+		</div>
+	</div>
+</div><!--end section1-->
+
+
+<div class="full-width section3"><!--start section3-->
+	<div class="container">
+		<h1>Our Services</h1>
+		<h4>Our dental centres offer a range of treatments, from dental examinations to specialist treatments</h4>
+	</div>
+	<div id="parentHorizontalTab">
+		<div class="container">
+			<ul class="resp-tabs-list hor_1">
+				<li>
+					<div class="s_icon">
+					  <%=image_tag "s-1.png" %>
+					 <!--  <img src="images/s-1.png" alt="services" /> -->
+					</div>
+					<h4>Implantology</h4>
+				</li>
+				<li>
+					<div class="s_icon"><%=image_tag "s-2.png" %></div>
+					<h4>Orthodontic</h4>
+				</li>
+				<li>
+					<div class="s_icon"><%=image_tag "s-3.png" %></div>
+					<h4>Dental Surgery</h4>
+				</li>
+				<li>
+					<div class="s_icon"><%=image_tag "s-4.png" %></div>
+					<h4>Hollywood Smile</h4>
+				</li>
+			</ul>
+		</div>
+		<div class="resp-tabs-container hor_1">
+			<div class="container">
+				<div class="tab_cont">
+					<img src="images/pro1.png" />
+					<h3>Dental Implantology Services</h3>
+					<p>Implantology is the branch of dentistry that treats patients who lost one or more of their teeth, improving chewing function and speech, and also achieving better esthetics by surgically placing dental implants.</p>
+
+					<p>Dental implants are the best supstitute for the lost teeth, because they replace and serv as natural root of the tooth.
+					</p>
+					<a class="btn no-pad" href="#">Explore More</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="tab_cont">
+					<img src="images/pro1.png" />
+					<h3>Orthodontic Implantology Services</h3>
+					<p>Implantology is the branch of dentistry that treats patients who lost one or more of their teeth, improving chewing function and speech, and also achieving better esthetics by surgically placing dental implants.</p>
+
+					<p>Dental implants are the best supstitute for the lost teeth, because they replace and serv as natural root of the tooth.
+					</p>
+					<a class="btn no-pad" href="#">Explore More</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="tab_cont">
+					<img src="images/pro1.png" />
+					<h3>Dental Surgery Implantology Services</h3>
+					<p>Implantology is the branch of dentistry that treats patients who lost one or more of their teeth, improving chewing function and speech, and also achieving better esthetics by surgically placing dental implants.</p>
+
+					<p>Dental implants are the best supstitute for the lost teeth, because they replace and serv as natural root of the tooth.
+					</p>
+					<a class="btn no-pad" href="#">Explore More</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="tab_cont">
+					<img src="images/pro1.png" />
+					<h3>Hollywood Smile Implantology Services</h3>
+					<p>Implantology is the branch of dentistry that treats patients who lost one or more of their teeth, improving chewing function and speech, and also achieving better esthetics by surgically placing dental implants.</p>
+
+					<p>Dental implants are the best supstitute for the lost teeth, because they replace and serv as natural root of the tooth.
+					</p>
+					<a class="btn no-pad" href="#">Explore More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!--end section3-->
+
+
+<div class="full-width section8"><!--start section8-->
+	<div class="container">
+		<h1>Lotus Dental Center offering best dental treatment
+		<span>at Al Khor, State of Qatar</span></h1>
+		<a class="btn" href="#">Make an Appointment</a>
+		<a class="btn" href="tel:97433356887">Call US . +974 3335 6887</a>
+	</div>
+</div><!--end section8-->
+
+<div class="full-width footer"><!--start footer-->
+	<div class="container">
+		<div class="contact_us">
+			<h1>Contact Us</h1>
+			<p><span>Lotus Dental Center</span>
+			512, City center, Opp Shukan Complex, <br />
+			Sola, Ahmedabad, Gujarat 380060
+			<br /><br />
+			<span>Call Us:</span>
+			<a class="f_call" href="tel:+090162 27777">+090162 27777</a>
+			<br /><br />
+			<span>Email:</span>
+			<a href="mailto:info@aglowiditsolutions.com">info@aglowiditsolutions.com</a></p>
+			<div class="get_social">
+				<p><span>Get Social:</span></p>
+				<div class="social">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+<!-- 		<div class="twitter">
+			<h1>Twitter</h1>
+			<img class="tw" src="images/tw_img.png" />
+		</div> -->
+		
+	</div>
+	<div class="full-width footer_map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1797.98875029279!2d51.49703704847862!3d25.672040549331772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45f9ea13c0f6c5%3A0x6177519e7944a693!2sLOTUS+DENTAL+CENTER!5e0!3m2!1sen!2sin!4v1483447519891" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+</div><!--end footer-->
+
+<div class="full-width copy_rights"><!--start copy_rights-->
+	<div class="container">
+		<div class="copy"><p>2016, <a href="#">Lotus Dental Center</a>. All rights reserved.</p></div>
+		<div class="f_links">
+			<ul>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Media</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+			</ul>
+		</div>
+		<a href="#" class="scrollup"></a>
+	</div>
+</div><!--end copy_rights-->
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Healthcare</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_include_tag 'jquery-2-2-0' %> 
+  </head>
+
+  <body class="loading">
+
+    <div class="wrapper">
+      <div class="full-width header"><!--start header-->
+        <div class="container_two">
+
+          <div class="full-width logo">
+            <%= link_to image_tag("/assets/logo.png"), root_path %>
+              <!-- <img src="images/logo.png" alt="logo" width="315" height="69" /> -->
+            
+          </div>
+        </div>
+      </div><!--end header-->    
+      <%= yield %>
+    </div>
+    
+  </body>
+</html>
