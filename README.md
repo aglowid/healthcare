@@ -8,7 +8,7 @@
 
 * Configuration
   - clone project first with following command:
-    git clone
+    git clone https://github.com/aglowid/healthcare
 
     run - bundle install
 
